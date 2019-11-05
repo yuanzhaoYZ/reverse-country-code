@@ -5,11 +5,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.stream.Stream;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-class Feature {
+class Feature implements Serializable {
 
     private final Country country;
     private final Geometry geometry;

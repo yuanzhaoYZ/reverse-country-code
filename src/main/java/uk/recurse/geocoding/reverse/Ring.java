@@ -3,10 +3,11 @@ package uk.recurse.geocoding.reverse;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import java.io.Serializable;
 import java.util.stream.Stream;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NONE)
-class Ring implements Geometry {
+class Ring implements Geometry, Serializable {
 
     private final float[] latitude;
     private final float[] longitude;

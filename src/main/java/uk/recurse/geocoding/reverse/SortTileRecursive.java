@@ -1,5 +1,6 @@
 package uk.recurse.geocoding.reverse;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 
 // algorithm paper: http://www.dtic.mil/dtic/tr/fulltext/u2/a324493.pdf
-class SortTileRecursive {
+class SortTileRecursive implements Serializable {
 
     private static final int PAGE_SIZE = 16;
     private static final Comparator<Geometry> X_COORDINATE =

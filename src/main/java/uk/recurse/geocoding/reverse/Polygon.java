@@ -3,9 +3,10 @@ package uk.recurse.geocoding.reverse;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
 import java.util.stream.Stream;
 
-class Polygon implements Geometry {
+class Polygon implements Geometry, Serializable {
 
     private final Ring ring;
     private final Geometry holes;

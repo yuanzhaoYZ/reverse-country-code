@@ -1,9 +1,10 @@
 package uk.recurse.geocoding.reverse;
 
+import java.io.Serializable;
 import java.util.DoubleSummaryStatistics;
 import java.util.stream.Stream;
 
-class BoundingBox {
+class BoundingBox implements Serializable {
 
     private final Point max;
     private final Point min;

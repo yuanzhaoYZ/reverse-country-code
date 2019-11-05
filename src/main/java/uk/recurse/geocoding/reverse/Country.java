@@ -2,6 +2,7 @@ package uk.recurse.geocoding.reverse;
 
 import java.io.BufferedReader;
 import java.io.Reader;
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -16,7 +17,7 @@ import static java.util.stream.Collectors.toMap;
 /**
  * Information about a country.
  */
-public class Country {
+public class Country implements Serializable {
 
     private final String iso;
     private final String iso3;

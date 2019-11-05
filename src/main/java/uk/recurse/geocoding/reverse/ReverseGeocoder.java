@@ -3,10 +3,7 @@ package uk.recurse.geocoding.reverse;
 import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UncheckedIOException;
+import java.io.*;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
@@ -16,7 +13,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 /**
  * A reverse geocoder that converts latitude and longitude coordinates to a country.
  */
-public class ReverseGeocoder {
+public class ReverseGeocoder implements Serializable {
 
     private final FeatureCollection featureCollection;
 
